@@ -1,0 +1,29 @@
+#N canvas 183 50 727 682 10;
+#X obj 3 0 cnv 15 300 550 cnv-s cnv-r PdWebParty 80 24 0 24 -99865
+-262144 0;
+#N canvas 385 307 878 533 sound 0;
+#X obj 399 225 osc~ 400;
+#X obj 399 248 *~ 0.3;
+#X obj 397 298 dac~;
+#X obj 401 148 random 30;
+#X obj 401 171 + 40;
+#X obj 401 194 mtof;
+#X obj 399 112 metro 100;
+#X obj 313 108 r button-s;
+#X obj 399 82 r toggle-s;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 0 0;
+#X connect 6 0 3 0;
+#X connect 7 0 3 0;
+#X connect 8 0 6 0;
+#X restore 136 510 pd sound;
+#X obj 5 45 cnv 15 290 450 cnv2-s cnv2-r empty 20 12 0 14 -228856 -66577
+0;
+#X obj 23 305 bng 120 125 50 0 button-s button-r button 26 60 0 20
+-204786 -4034 -13381;
+#X obj 150 304 tgl 120 0 toggle-s toggle-r toggle 24 60 0 20 -261234
+-258113 -86277 0 1;
